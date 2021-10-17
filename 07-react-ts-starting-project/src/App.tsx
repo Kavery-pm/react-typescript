@@ -1,12 +1,15 @@
 import React from "react";
+import { createTextSpanFromBounds } from "typescript";
+import Todos from './models/Todo';
 
-import "./App.css";
 import Todo from "./components/Todo";
 
+
 function App() {
+  const todos = [new Todos('Learn js'), new Todos('learn ts'), new Todos('learn redux')];
   return (
     <div>
-      <Todo item={['Learn js', 'learn ts', 'learn react', 'learn redux']}></Todo>
+      <Todo item={todos}></Todo>
     </div>
   );
 }

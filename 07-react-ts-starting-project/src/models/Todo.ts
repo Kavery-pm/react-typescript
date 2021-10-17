@@ -1,4 +1,4 @@
-class Todo {
+class Todos {
 text: string;
 id: string;
 
@@ -8,4 +8,4 @@ this.id = new Date().toISOString();
 }
 
 }
-export default Todo;
+export default Todos;
