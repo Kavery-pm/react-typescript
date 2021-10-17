@@ -6,7 +6,7 @@ import Todo from "./components/Todo";
 function App() {
   return (
     <div>
-      <Todo item={[]}></Todo>
+      <Todo item={['Learn js', 'learn ts', 'learn react', 'learn redux']}></Todo>
     </div>
   );
 }
