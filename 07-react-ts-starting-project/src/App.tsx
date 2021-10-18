@@ -4,6 +4,7 @@ import Todos from "./models/Todo";
 
 import Todo from "./components/Todo";
 import NewTodo from "./components/NewTodo";
+import { isTemplateExpression } from "typescript";
 
 function App() {
   // const todos = [
@@ -17,9 +18,14 @@ const [todos, settodos] = useState<Todos[]>([]);
 console.log(todo);
 settodos(prevState => prevState.concat(newTodo));
   }
+  const removeTodoHandler = (id:string)=>{
+    console.log('hi');
+    console.log(id);
+    settodos(prevState=>prevState.filter((item)=>item.id !== id));
+  }
   return (
     <div>
-      <Todo item={todos}></Todo>
+      <Todo item={todos} onRemoveTodos={removeTodoHandler}></Todo>
       <NewTodo onAddTodo={addTodoHandler}></NewTodo>
     </div>
   );
